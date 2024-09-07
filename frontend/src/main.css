@@ -1,0 +1,235 @@
+:root {
+  --primary-color: #1dbf73; /* Vibrant green */
+  --secondary-color: #0e1724; /* Deep blue-black */
+  --accent-color: #f2a007; /* Accent color like Fiverr/Upwork */
+  --text-color: #62646a;
+  --background-color: #f9f9f9;
+  --header-height: 80px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Light shadow for cards */
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  height: var(--header-height);
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: white;
+}
+
+.navbar-logo a {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li {
+  margin: 0 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-auth a {
+  margin-left: 15px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login {
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-signup {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-signup:hover {
+  background-color: var(--accent-color);
+}
+
+/* Home page styles without background image */
+.home {
+  text-align: center;
+  padding: 100px 0;
+  background-color: var(--primary-color); /* Using primary color as background */
+  color: white;
+}
+
+.home h1 {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.home p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 20px 40px;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Services page styles */
+.services {
+  padding: 60px 0;
+}
+
+.services h1 {
+  font-size: 40px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* About and Contact pages */
+.about, .contact {
+  padding: 60px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h1, .contact h1 {
+  font-size: 40px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.about p, .contact p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    margin-bottom: 10px;
+  }
+
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input, .search-bar button {
+    width: 100%;
+  }
+}
